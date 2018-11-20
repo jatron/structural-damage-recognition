@@ -1,0 +1,6 @@
+tf_files/
+my_virtual_env/
+ios/
+android/
+*.pyc
+
