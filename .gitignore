@@ -2,5 +2,9 @@ tf_files/
 my_virtual_env/
 ios/
 android/
+.ipynb_checkpoints/
 *.pyc
+X_test.npy
+X_train.npy
+y_train.npy
 
