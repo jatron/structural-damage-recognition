@@ -19,10 +19,10 @@ inception_v3 = tf.keras.applications.InceptionV3(input_shape=(224, 224, 3), incl
 # we should freeze:
 for i, layer in enumerate(inception_v3.layers):
     print(i, layer.name)
-# we will freeze the first 299 layers and unfreeze the rest:
-for layer in inception_v3.layers[:299]:
+# we will freeze the first 300 layers and unfreeze the rest:
+for layer in inception_v3.layers[:300]:
     layer.trainable = False
-for layer in inception_v3.layers[299:]:
+for layer in inception_v3.layers[300:]:
     layer.trainable = True
 
 model = tf.keras.Sequential([
@@ -43,3 +43,5 @@ print("number of trainable variables:", len(model.trainable_variables))
 model.summary()
 
 history = model.fit(x=X_train_preprocessed, y=y_train, batch_size=100, epochs=50, validation_split=0.1)
+
+pickle.dump(history.history, open("history_freeze_first_300_layers_of_inception_v3_and_train_the_rest.pkl", "wb"))
