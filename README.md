@@ -34,3 +34,8 @@ freeze_inceptv3_flatten_smalldatagen.py # augment the data with flip, width_shif
 smalldatagen_predict.py # Enable saving and loading of model checkpoints and then perform prediction, accuracy, and confusion matrices
 
 freeze_incept_twice.py # Train twice with the data; first pass for the new layer only; second pass, more layers with low learning rate.
+
+mergescores.py # merges mobilenetv1 and inceptionv3 for ensemble averaging, simple majority rule
+
+weightscores.py # weights mobilenetv1 and inceptionv3 scores for ensemble averaging
+
