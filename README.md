@@ -37,5 +37,5 @@ freeze_incept_twice.py # Train twice with the data; first pass for the new layer
 
 mergescores.py # merges mobilenetv1 and inceptionv3 for ensemble averaging, simple majority rule
 
-weightscores.py # weights mobilenetv1 and inceptionv3 scores for ensemble averaging
+weightscores.py # weights mobilenetv1 and inceptionv3 scores for ensemble averaging.  Ensemble averaging of mobilenetv1 and inceptionv3 (gives a few % increase in validation accuracy)
 
